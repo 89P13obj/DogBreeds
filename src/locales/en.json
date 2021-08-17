@@ -1,0 +1,9 @@
+{
+  "appName": "DogBreeds",
+  "settings": {
+    "header": "The changes in language settings will not affect the Title an Description of the dog. They arrive only in English from the dog API service."
+  },
+  "breeds": {
+    "button": "Another Image"
+  }
+}

@@ -1,0 +1,4 @@
+export const SAVE = 'BREEDS/SAVE';
+export const FETCH_BREEDS = 'BREEDS/FETCH_BREEDS';
+export const GET_RANDOM_IMAGE = 'BREEDS/GET_RANDOM_IMAGE';
+export const UPDATE_IMAGE = 'BREEDS/UPDATE_IMAGE';
