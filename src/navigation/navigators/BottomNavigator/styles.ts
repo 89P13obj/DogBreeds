@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { THEME } from '../../../common/constants/colors';
 import { ThemeType } from '../../../models/ISettings';
+import { isIos } from '../../../helpers/platform';
 
 export const styles = (theme: ThemeType) =>
   StyleSheet.create({
@@ -19,6 +20,11 @@ export const styles = (theme: ThemeType) =>
     },
 
     inactiveTab: {
+      position: 'absolute',
+      width: 50,
+      height: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
       borderWidth: 0,
       borderColor: THEME[theme].backgroundView,
       shadowColor: '#000000',
@@ -27,30 +33,37 @@ export const styles = (theme: ThemeType) =>
         height: 4,
       },
       shadowRadius: 5,
-      shadowOpacity: 0.5,
-      width: 50,
-      height: 50,
+      shadowOpacity: 0.7,
+
       backgroundColor: THEME[theme].backgroundView,
       borderRadius: 25,
-      justifyContent: 'center',
-      alignItems: 'center',
+
+      elevation: 8,
     },
     activeTab: {
-      width: 70,
-      height: 70,
+      position: 'absolute',
+      width: 80,
+      height: 80,
       justifyContent: 'center',
       alignItems: 'center',
-      borderRadius: 35,
+      borderRadius: 40,
       backgroundColor: 'transparent',
-      borderColor: THEME[theme].backgroundView,
+      borderColor: isIos ? THEME[theme].backgroundView : 'transparent',
       borderWidth: 10,
-      shadowColor: '#000000',
+      shadowColor: '#000',
       shadowOffset: {
-        width: 4,
-        height: 4,
+        width: 6,
+        height: 6,
       },
       shadowRadius: 5,
-      shadowOpacity: 0.5,
-      overflow: 'hidden',
+      shadowOpacity: 0.7,
+      elevation: 24,
+    },
+    tabContainer: {
+      width: 50,
+      height: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 25,
     },
   });

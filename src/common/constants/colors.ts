@@ -34,7 +34,7 @@ export const colors = {
 };
 
 const LIGHT_THEME = {
-  backgroundColor: '#F5F5F5',
+  backgroundColor: '#E0E0E0',
   backgroundView: '#FFFFFF',
   colorText: '#000000',
   trackColor: '#116062',
